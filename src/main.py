@@ -15,6 +15,9 @@ def main():
     except InvalidMoveError as e:
         print(f"Erreur : {e}")
         return
+    except (KeyboardInterrupt, EOFError):
+        print("\nInterruption par l'utilisateur.")
+        return
 
 if __name__ == "__main__":
     main()
